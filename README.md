@@ -4,7 +4,7 @@ This repository contains a series of independent deep learning projects focused 
 
 - ✅ **Pneumonia Classification** from chest X-ray images  
 - ✅ **Cardiac Structure Detection** in DICOM format  
-- ✅ **Tumor Segmentation** in lung and liver scans
+- ✅ **Atrium Segmentation** in cardiac MRI scans
 
 Each project demonstrates a complete pipeline from data loading and preprocessing (including DICOM handling), to model training, evaluation, and visualization.
 
@@ -49,6 +49,42 @@ Below is an example confusion matrix generated on the test set:
 
 ---
 
+
+## 📁 Project 2 – Cardiac Structure Detection *(In Progress)*
+
+This project focuses on detecting cardiac structure from DICOM medical images.  
+🔧 Implementation and documentation coming soon...
+
+### 📊 Dataset  
+- **Source**: [RSNA Pneumonia Detection Challenge – Kaggle](https://www.kaggle.com/competitions/rsna-pneumonia-detection-challenge/data)  
+- **Total Images**: ~26,684 chest X-ray DICOM files  
+- **Labels**:  
+  - Images labeled with bounding boxes for pneumonia, which often overlap with cardiac or thoracic structures  
+  - Used as a proxy dataset to localize **heart-related regions** in frontal chest radiographs  
+- **Format**:  
+  - Images in **DICOM format** (`.dcm`)  
+  - Bounding box annotations in `stage_2_train_labels.csv`
+
+
+---
+
+## 📁 Project 3 – Atrium Segmentation *(In Progress)*
+This project applies deep learning techniques for **2D semantic segmentation of the atrium using cardiac MRI scans and their segmentation maps.
+
+### 📊 Dataset  
+- **Source**: [Medical Segmentation Decathlon](http://medicaldecathlon.com/)
+- **Total Images**: 20 cardiac MRI scans with ground truth masks  
+- **Labels**:  
+  - Manual segmentation masks of the **left atrium**  
+  - Binary segmentation of the **left atrium** :  `0` = background, `1` = atrium  
+- **Format**:  
+  - Files are in **NIfTI format** (`.nii.gz`)  
+
+🔧 Implementation and documentation coming soon...
+
+
+
+---
 ## 🧪 Techniques Used
 
 - Convolutional Neural Networks (CNNs)
