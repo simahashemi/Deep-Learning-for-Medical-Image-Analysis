@@ -81,7 +81,7 @@ This project focuses on detecting cardiac structure from DICOM chest xrays.
   - Training and validation loss curves in TensorBoard
     <img src="images/cardiac_detection_loss.png" width="500"/>
   - Predictions overlaid on images for visual inspection  
-    <img src="images/bbox_progression.gif" width="500"/>
+    <img src="images/bbox_progression.gif" width="500" duration = 0.01/>
 
 ---
 
