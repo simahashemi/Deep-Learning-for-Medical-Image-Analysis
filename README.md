@@ -87,7 +87,7 @@ This project focuses on detecting cardiac structure from DICOM chest xrays.
 
 ### 📉 Results  
 Example of ground truth (white) vs. predicted (red) bounding boxes:  
-<img src="images/cardiac_prediction.png" width="500"/>
+<img src="images/cardiac_prediction.png" width="500" duration=0.5/>
 
 The model successfully learned to detect cardiac structure.
 
