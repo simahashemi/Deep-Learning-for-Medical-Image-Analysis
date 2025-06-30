@@ -25,13 +25,13 @@ Build a deep learning model that classifies chest X-ray images into **Pneumonia*
     
 ### 🛠️ What I Did  
 - Loaded and visualized DICOM files using `pydicom` and `OpenCV`
-  ![input xrays](images/sample_input.pdf)
+  ![input xrays](images/sample_input.png)
 - Applied **data augmentation** using `torchvision.transforms`:
   - `RandomAffine`: ±15° rotation, ±5% vertical translation, ±10% shear, scaling between 90–110%  
   - `RandomResizedCrop`: crops and resizes to 224×224 with random scale (35% to 100%)  
   - `Normalize`: applied with dataset-specific mean and std  
   - `ToTensor`: converts images to PyTorch tensors
-    ![Augmented xrays](images/augmented_input.pdf)
+    ![Augmented xrays](images/augmented_input.png)
 - Built a binary classifier using pytorch lightning (fine-tuned `ResNet18`)
 - Trained with `BCEWithLogitsLoss` and Adam optimizer
 - Evaluated with accuracy and confusion matrix
