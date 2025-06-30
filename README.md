@@ -44,7 +44,7 @@ Build a deep learning model that classifies chest X-ray images into **Pneumonia*
 ### 📉 Results  
 Below is an example confusion matrix generated on the test set:
 
-![Confusion Matrix](images/confusion_matrix_pneumonia.pdf)  
+![Confusion Matrix](images/penumonia_conf_mat.png)  
 *Confusion matrix of model predictions on the test set*
 
 ---
