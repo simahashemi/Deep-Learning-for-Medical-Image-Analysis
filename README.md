@@ -54,18 +54,42 @@ Below is an example confusion matrix generated on the test set:
 
 ## 📁 Project 2 – Cardiac Structure Detection *(In Progress)*
 
-This project focuses on detecting cardiac structure from DICOM medical images.  
-🔧 Implementation and documentation coming soon...
+This project focuses on detecting cardiac structure from DICOM chest xrays.  
 
 ### 📊 Dataset  
 - **Source**: [RSNA Pneumonia Detection Challenge – Kaggle](https://www.kaggle.com/competitions/rsna-pneumonia-detection-challenge/data)  
-- **Total Images**: ~26,684 chest X-ray DICOM files  
+- **Total Images**: 496 chest X-ray DICOM files  
 - **Labels**:  
-  - Images labeled with bounding boxes for pneumonia, which often overlap with cardiac or thoracic structures  
-  - Used as a proxy dataset to localize **heart-related regions** in frontal chest radiographs  
+  - Images labeled with bounding boxes for cardiac structures  
+  - Used 400 images as train dataset and 96 images as validation dataset  
 - **Format**:  
   - Images in **DICOM format** (`.dcm`)  
-  - Bounding box annotations in `stage_2_train_labels.csv`
+ 
+---
+### 🛠️ What I Did  
+- Parsed and visualized bounding box annotations on chest X-rays using `pydicom` and `matplotlib.patches`  
+  <img src="images/sample_cardiac.png" width="500"/>
+
+- Implemented a **bounding box regression model** using PyTorch Lightning and ResNet18 backbone:
+  - Modified the final layer to predict 4 coordinates (x_min, y_min, x_max, y_max)
+  - Applied data augmentations that preserve bounding box consistency using `albumentations`:
+    - Random contrast, affine transformations 
+    <img src="images/cardiac_augmented_sample.png" width="500"/>
+
+- Trained with **Mean Squared Error Loss** and Adam optimizer  
+- Logged and visualized:
+  - Training and validation loss curves in TensorBoard
+    <img src="images/cardiac_detection_loss.png" width="500"/>
+  - Predictions overlaid on images for visual inspection  
+    <img src="images/bbox_prediction.png" width="500"/>
+
+---
+
+### 📉 Results  
+Example of ground truth (white) vs. predicted (red) bounding boxes:  
+<img src="images/cardiac_prediction.png" width="500"/>
+
+The model successfully learned to detect cardiac structure.
 
 
 ---
