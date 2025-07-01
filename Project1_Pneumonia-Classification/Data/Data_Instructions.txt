@@ -1,0 +1,10 @@
+# Data Download Instructions
+
+The dataset used in this project is too large to be hosted on GitHub.
+
+You can download it from the following link:
+[RSNA Pneumonia Detection Challenge]
+📁 URL: https://www.kaggle.com/competitions/rsna-pneumonia-detection-challenge/data
+
+After downloading, please place the data files in this directory:
+Data/
