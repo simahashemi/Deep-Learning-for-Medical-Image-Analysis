@@ -1,0 +1,10 @@
+# Data Download Instructions
+
+The dataset used in this project is too large to be hosted on GitHub.
+
+You can download it from the following link:
+[Dataset Name or Description]
+📁 URL: https://example.com/your-dataset-link
+
+After downloading, please place the data files in this directory:
+Data/
