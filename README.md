@@ -25,7 +25,7 @@ Build a deep learning model that classifies chest X-ray images into **Pneumonia*
     
 ### 🛠️ What I Did  
 - Loaded and visualized DICOM files using `pydicom` and `OpenCV`
-  <img src="images/sample_input.png" width="500"/>
+  <img src="Project1_Pneumonia-Classification/images/sample_input.png" width="500"/>
 
 - Applied **data augmentation** using `torchvision.transforms`:
   - `RandomAffine`: ±15° rotation, ±5% vertical translation, ±10% shear, scaling between 90–110%  
