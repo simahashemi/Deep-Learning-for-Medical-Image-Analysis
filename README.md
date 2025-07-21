@@ -32,21 +32,21 @@ Build a deep learning model that classifies chest X-ray images into **Pneumonia*
   - `RandomResizedCrop`: crops and resizes to 224×224 with random scale (35% to 100%)  
   - `Normalize`: applied with dataset-specific mean and std  
   - `ToTensor`: converts images to PyTorch tensors
-    <img src="Deep-Learning-for-Medical-Image-Analysis/Project1/images/augmented_input.png" width="500"/>
+    <img src="Project1_Pneumonia-Classification/images/augmented_input.png" width="500"/>
 
 - Built a binary classifier using pytorch lightning (fine-tuned `ResNet18`)
 - Trained with `BCEWithLogitsLoss` and Adam optimizer
 - Evaluated with accuracy and confusion matrix
 - Visualized:
   - Training/validation loss and accuracy curves
-  ![loss](images/loss.pdf)  
+  ![loss](Project1_Pneumonia-Classification/images/loss.png)  
   - Grad-CAM for interpretability
-  ![CAM xrays](images/CAM.pdf)
+  ![CAM xrays](Project1_Pneumonia-Classification/images/CAM.png)
 
 ### 📉 Results  
 Below is an example confusion matrix generated on the test set:
 
-<img src="images/penumonia_conf_mat.png" width="300"/>
+<img src="Project1_Pneumonia-Classification/images/penumonia_conf_mat.png" width="300"/>
 *Confusion matrix of model predictions on the test set*
 
 ---
