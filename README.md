@@ -32,7 +32,7 @@ Build a deep learning model that classifies chest X-ray images into **Pneumonia*
   - `RandomResizedCrop`: crops and resizes to 224×224 with random scale (35% to 100%)  
   - `Normalize`: applied with dataset-specific mean and std  
   - `ToTensor`: converts images to PyTorch tensors
-    <img src="images/augmented_input.png" width="500"/>
+    <img src="Deep-Learning-for-Medical-Image-Analysis/Project1/images/augmented_input.png" width="500"/>
 
 - Built a binary classifier using pytorch lightning (fine-tuned `ResNet18`)
 - Trained with `BCEWithLogitsLoss` and Adam optimizer
@@ -68,26 +68,26 @@ This project focuses on detecting cardiac structure from DICOM chest xrays.
 ---
 ### 🛠️ What I Did  
 - Parsed and visualized bounding box annotations on chest X-rays using `pydicom` and `matplotlib.patches`  
-  <img src="images/sample_cardiac.png" width="500"/>
+  <img src="Project2_Cardiac-Detection/images/sample_cardiac.png" width="500"/>
 
 - Implemented a **bounding box regression model** using PyTorch Lightning and ResNet18 backbone:
   - Modified the final layer to predict 4 coordinates (x_min, y_min, x_max, y_max)
   - Applied data augmentations that preserve bounding box consistency using `albumentations`:
     - Random contrast, affine transformations 
-    <img src="images/cardiac_augmented_sample.png" width="500"/>
+    <img src="Project2_Cardiac-Detection/images/cardiac_augmented_sample.png" width="500"/>
 
 - Trained with **Mean Squared Error Loss** and Adam optimizer  
 - Logged and visualized:
   - Training and validation loss curves in TensorBoard
-    <img src="images/cardiac_detection_loss.png" width="500"/>
+    <img src="Project2_Cardiac-Detection/images/cardiac_detection_loss.png" width="500"/>
   - Predictions overlaid on images for visual inspection  
-    <img src="images/bbox_progression.gif" width="500" />
+    <img src="Project2_Cardiac-Detection/images/bbox_progression.gif" width="500" />
 
 ---
 
 ### 📉 Results  
 Example of ground truth (white) vs. predicted (red) bounding boxes:  
-<img src="images/cardiac_prediction.png" width="500" />
+<img src="Project2_Cardiac-Detection/images/cardiac_prediction.png" width="500" />
 
 The model successfully learned to detect cardiac structure.
 
